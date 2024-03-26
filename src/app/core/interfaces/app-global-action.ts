@@ -23,11 +23,11 @@ export enum AppActionTypes {
     /**
      * Requires loading "notifications" from the server.
      */
-    NOTIFICATION_LIST_REQUEST = 'AppActionTypes:NOTIFICATION_LIST_REQUEST',
+    NOTIFICATION_REQUEST = 'AppActionTypes:NOTIFICATION_LIST_REQUEST',
     /**
      * Incoming "notifications"  list from server.
      */
-    NOTIFICATION_LIST_UPDATE = 'AppActionTypes:NOTIFICATION_LIST_UPDATE',
+    NOTIFICATION_UPDATE = 'AppActionTypes:NOTIFICATION_LIST_UPDATE',
 } 
 
 export interface AppGlobalAction {

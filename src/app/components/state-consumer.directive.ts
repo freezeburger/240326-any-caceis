@@ -13,14 +13,14 @@ export abstract class StateConsumer implements CisStatePresenter<AppGlobalState>
 
 /**
  * TypeScript Overloads.
- * Use the correposnding payload to your "AppActionTypes" 
+ * Use the corresponding payload to your "AppActionTypes" 
  */
-  createAction(type: AppActionTypes.MESSAGE_LIST_REQUEST): (payload?: null) => void
-  createAction(type: AppActionTypes.MESSAGE_LIST_UPDATE): (payload: AppMessage[]) => void
-  createAction(type: AppActionTypes.MESSAGE_SEND_REQUEST): (payload: AppMessagePayload) => void
-  createAction(type: AppActionTypes.MESSAGE_SEND_RESULT): (payload: AppMessage) => void
-  createAction(type: AppActionTypes.NOTIFICATION_LIST_REQUEST): (payload: Omit<AppNotification, 'id'>) => void
-  createAction(type: AppActionTypes.NOTIFICATION_LIST_UPDATE): (payload: AppNotification) => void
+  createAction(type: AppActionTypes.MESSAGE_LIST_REQUEST): (payload?: null) => void;
+  createAction(type: AppActionTypes.MESSAGE_LIST_UPDATE): (payload: AppMessage[]) => void;
+  createAction(type: AppActionTypes.MESSAGE_SEND_REQUEST): (payload: AppMessagePayload) => void;
+  createAction(type: AppActionTypes.MESSAGE_SEND_RESULT): (payload: AppMessage) => void;
+  createAction(type: AppActionTypes.NOTIFICATION_REQUEST): (payload: Omit<AppNotification, 'id'>) => void;
+  createAction(type: AppActionTypes.NOTIFICATION_UPDATE): (payload: AppNotification) => void;
   createAction(type: AppActionTypes): (payload?: any) => void {
     return (payload?: any) => {
       this.applicationState.process({ type, payload })

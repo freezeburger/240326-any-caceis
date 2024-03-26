@@ -1,9 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CoreModule } from './core/core.module';
-import { APPLICATION_STATE_MANAGER } from './core/tokens/state-manager';
 import { SharedModule } from './shared/shared.module';
 import { StateConsumer } from './components/state-consumer.directive';
+import { AppActionTypes } from './core/interfaces/app-global-action';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +17,6 @@ import { StateConsumer } from './components/state-consumer.directive';
   styleUrl: './app.component.scss'
 })
 export class AppComponent extends StateConsumer {
-
-  /*  asm = inject(APPLICATION_STATE_MANAGER); */
-
-  //constructor( @Inject(APPLICATION_STATE_MANAGER) asm:CisStateManager ){}
+  loadMessages = this.createAction(AppActionTypes.MESSAGE_LIST_REQUEST);
+  sendMessage = this.createAction(AppActionTypes.MESSAGE_SEND_REQUEST);
 }

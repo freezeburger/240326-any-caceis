@@ -1,6 +1,10 @@
 
 export enum AppActionTypes {
     /**
+     * Inicates initialization.
+     */
+        INIT = 'AppActionTypes:INIT',
+    /**
      * Requires loading "messages" from the server.
      */
     MESSAGE_LIST_REQUEST = 'AppActionTypes:MESSAGE_LIST_REQUEST',
@@ -24,7 +28,7 @@ export enum AppActionTypes {
      * Incoming "notifications"  list from server.
      */
     NOTIFICATION_LIST_UPDATE = 'AppActionTypes:NOTIFICATION_LIST_UPDATE',
-}
+} 
 
 export interface AppGlobalAction {
     type: AppActionTypes;

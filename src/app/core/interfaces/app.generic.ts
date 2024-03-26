@@ -1,4 +1,13 @@
 
+import { FormGroup,FormControl } from "@angular/forms";
+
+/**
+ * FormMapping
+ */
+type MappedToForm<Type> = {
+    [Properties in keyof Type]: FormControl<Type[Properties] |null>
+}
+
 /**
  * Timestamp
  */

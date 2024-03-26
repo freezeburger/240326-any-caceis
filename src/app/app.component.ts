@@ -17,9 +17,8 @@ import { StateConsumer } from './components/state-consumer.directive';
   styleUrl: './app.component.scss'
 })
 export class AppComponent extends StateConsumer {
-  title = 'ng-workspace';
 
- /*  asm = inject(APPLICATION_STATE_MANAGER); */
+  /*  asm = inject(APPLICATION_STATE_MANAGER); */
 
   //constructor( @Inject(APPLICATION_STATE_MANAGER) asm:CisStateManager ){}
 }

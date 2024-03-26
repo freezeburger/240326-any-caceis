@@ -8,7 +8,8 @@ import { AppGlobalState } from '../interfaces/app-global-state';
 export class StateManagerService implements CisStateManager{
 
   state$ = new BehaviorSubject<AppGlobalState>({
-    messages:[]
+    messages:[],
+    notifications:[],
   });
 
   process(action: AppGlobalAction): void {

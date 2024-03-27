@@ -1,0 +1,14 @@
+<ng-container 
+    *ngIf=" (applicationState.state$ | async)?.notifications as notifications" 
+    [ngTemplateOutlet]=" notifications.length ? ready: loading ">
+</ng-container>
+
+<ng-template #loading>
+    <p> {{ applicationState.state$ | async | json}}</p>
+</ng-template>
+
+<ng-template #ready>
+    <strong> No notifications yet. </strong>
+</ng-template>
+
+

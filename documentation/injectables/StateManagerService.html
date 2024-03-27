@@ -142,6 +142,20 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_action" >_action</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_state" >_state</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#action$" >action$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                     <span class="modifier">Readonly</span>
                                 <a href="#state$" >state$</a>
                             </li>
@@ -158,6 +172,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#process" >process</a>
                             </li>
                         </ul>
@@ -172,24 +187,6 @@
     </table>
 </section>
 
-            <section data-compodoc="block-constructor">
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/core/services/state-manager.service.ts:6</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
             <section data-compodoc="block-methods">
     
@@ -202,6 +199,7 @@
                 <td class="col-md-4">
                     <a name="process"></a>
                     <span class="name">
+                            <span class="modifier">Public</span>
                         <span ><b>process</b></span>
                         <a href="#process"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -209,15 +207,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>process(action: literal type)</code>
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>process(action: <a href="../interfaces/AppGlobalAction.html" target="_self">AppGlobalAction</a>)</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="12"
-                                    class="link-to-prism">src/app/core/services/state-manager.service.ts:12</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="35"
+                                    class="link-to-prism">src/app/core/services/state-manager.service.ts:35</a></div>
                         </td>
                     </tr>
 
@@ -240,7 +239,7 @@
                                         <tr>
                                                 <td>action</td>
                                             <td>
-                                                        <code>literal type</code>
+                                                            <code><a href="../interfaces/AppGlobalAction.html" target="_self" >AppGlobalAction</a></code>
                                             </td>
 
                                             <td>
@@ -273,8 +272,94 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="_action"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_action</b></span>
+                        <a href="#_action"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;AppGlobalAction&gt;({
+    type:AppActionTypes.INIT,
+    payload:null
+  })</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/core/services/state-manager.service.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_state"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_state</b></span>
+                        <a href="#_state"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;AppGlobalState&gt;({
+    messages:[],
+    notifications:[]
+  })</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/core/services/state-manager.service.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="action$"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>action$</b></span>
+                        <a href="#action$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this._action.asObservable()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/core/services/state-manager.service.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="state$"></a>
                     <span class="name">
+                            <span class="modifier">Public</span>
                             <span class="modifier">Readonly</span>
                         <span ><b>state$</b></span>
                         <a href="#state$"><span class="icon ion-ios-link"></span></a>
@@ -283,12 +368,12 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>new BehaviorSubject&lt;any&gt;({ code:123456 })</code>
+                        <i>Default value : </i><code>this._state.asObservable()</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/core/services/state-manager.service.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/core/services/state-manager.service.ts:33</a></div>
                         </td>
                     </tr>
 
@@ -302,20 +387,50 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { CisStateManager } from &#x27;../interfaces/cis-state-manager&#x27;;
-import { BehaviorSubject } from &#x27;rxjs&#x27;;
+import { CisStateManager } from &#x27;../interfaces/cis-patterns&#x27;;
+
+import { AppActionTypes, AppGlobalAction } from &#x27;../interfaces/app-global-action&#x27;;
+import { AppGlobalState } from &#x27;../interfaces/app-global-state&#x27;;
+import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
+
+/* 
+
+RXJS 
+- Observable
+Sujet &#x3D; observable avec un canal de publication. (next)
+Subject
+ReplaySubject
+*BehaviorSubjet
+AsyncSubject
+*/
 
 @Injectable()
-export class StateManagerService implements CisStateManager{
+export class StateManagerService implements CisStateManager&lt;AppGlobalState, AppGlobalAction&gt;{
 
-  constructor() { }
+  private _state &#x3D; new BehaviorSubject&lt;AppGlobalState&gt;({
+    messages:[],
+    notifications:[]
+  })
 
-  readonly state$ &#x3D; new BehaviorSubject&lt;any&gt;({ code:123456 });
-
-  process(action: { type: string; paylod: any; }): void {
-    console.table(action);
+  private _action &#x3D; new BehaviorSubject&lt;AppGlobalAction&gt;({
+    type:AppActionTypes.INIT,
+    payload:null
+  })
+  
+  public readonly action$ &#x3D; this._action.asObservable();
+  public readonly state$ &#x3D;  this._state.asObservable();
+  
+  public process(action: AppGlobalAction): void {
+   console.table(action)
   }
 }
+
+/* 
+{
+    messages:[],
+    notifications:[],
+  } 
+*/
 </code></pre>
     </div>
 

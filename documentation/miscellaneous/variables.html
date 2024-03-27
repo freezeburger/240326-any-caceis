@@ -153,7 +153,13 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
-  providers: [provideRouter(routes)]
+  providers: [
+    // Contexte
+    { provide: PLATFORM_INITIALIZER, useValue: () &#x3D;&gt; console.log(&#x27;1. Platform Ready&#x27;), multi: true },
+    // Configuration
+    { provide: APP_INITIALIZER, useValue: () &#x3D;&gt; console.log(&#x27;1. Application Ready&#x27;), multi: true },
+    provideRouter(routes)
+  ]
 }</code>
                     </td>
                 </tr>
@@ -177,7 +183,7 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>new InjectionToken&lt;CisStateManager&gt;(&#x27;APPLICATION_STATE_MANAGER&#x27;)</code>
+                        <i>Default value : </i><code>new InjectionToken&lt;CisStateManager&lt;AppGlobalState,AppGlobalAction&gt;&gt;(&#x27;APPLICATION_STATE_MANAGER&#x27;)</code>
                     </td>
                 </tr>
 

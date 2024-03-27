@@ -59,19 +59,16 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/CisImportModule.html" data-type="entity-link" >CisImportModule</a>
                             </li>
                             <li class="link">
-                                <a href="modules/ComponentsModule.html" data-type="entity-link" >ComponentsModule</a>
-                            </li>
-                            <li class="link">
                                 <a href="modules/CoreModule.html" data-type="entity-link" >CoreModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
-                                        'data-bs-target="#injectables-links-module-CoreModule-1a1d5405df377eb76e8b977877497d9bb5b0a01fc765abe0ee21a7de72fb8bfdc017cbf012268ed87deb5ed1906e85cf273e9a1ae6585cebf13ec13b2a4d5d0d"' : 'data-bs-target="#xs-injectables-links-module-CoreModule-1a1d5405df377eb76e8b977877497d9bb5b0a01fc765abe0ee21a7de72fb8bfdc017cbf012268ed87deb5ed1906e85cf273e9a1ae6585cebf13ec13b2a4d5d0d"' }>
+                                        'data-bs-target="#injectables-links-module-CoreModule-3424a4b1f68ef3e35031b00a0b004faad6c16e4d31149060f82823da3713f00ead48c07e86b41b13508d5276e2fb0ceec5194f65e192f0f474cff22b11718f73"' : 'data-bs-target="#xs-injectables-links-module-CoreModule-3424a4b1f68ef3e35031b00a0b004faad6c16e4d31149060f82823da3713f00ead48c07e86b41b13508d5276e2fb0ceec5194f65e192f0f474cff22b11718f73"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-CoreModule-1a1d5405df377eb76e8b977877497d9bb5b0a01fc765abe0ee21a7de72fb8bfdc017cbf012268ed87deb5ed1906e85cf273e9a1ae6585cebf13ec13b2a4d5d0d"' :
-                                        'id="xs-injectables-links-module-CoreModule-1a1d5405df377eb76e8b977877497d9bb5b0a01fc765abe0ee21a7de72fb8bfdc017cbf012268ed87deb5ed1906e85cf273e9a1ae6585cebf13ec13b2a4d5d0d"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-CoreModule-3424a4b1f68ef3e35031b00a0b004faad6c16e4d31149060f82823da3713f00ead48c07e86b41b13508d5276e2fb0ceec5194f65e192f0f474cff22b11718f73"' :
+                                        'id="xs-injectables-links-module-CoreModule-3424a4b1f68ef3e35031b00a0b004faad6c16e4d31149060f82823da3713f00ead48c07e86b41b13508d5276e2fb0ceec5194f65e192f0f474cff22b11718f73"' }>
                                         <li class="link">
                                             <a href="injectables/StateManagerService.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >StateManagerService</a>
                                         </li>
@@ -108,6 +105,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                         </ul>
                     </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#classes-links"' :
+                            'data-bs-target="#xs-classes-links"' }>
+                            <span class="icon ion-ios-paper"></span>
+                            <span>Classes</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
+                            <li class="link">
+                                <a href="classes/StateConsumer.html" data-type="entity-link" >StateConsumer</a>
+                            </li>
+                        </ul>
+                    </li>
                         <li class="chapter">
                             <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#injectables-links"' :
                                 'data-bs-target="#xs-injectables-links"' }>
@@ -130,7 +140,37 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
+                                <a href="interfaces/AppGlobalAction.html" data-type="entity-link" >AppGlobalAction</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/AppGlobalState.html" data-type="entity-link" >AppGlobalState</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/AppMessage.html" data-type="entity-link" >AppMessage</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/AppNotification.html" data-type="entity-link" >AppNotification</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CisActionCreator.html" data-type="entity-link" >CisActionCreator</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CisActionProcessor.html" data-type="entity-link" >CisActionProcessor</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CisActionPublisher.html" data-type="entity-link" >CisActionPublisher</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CisActionSubscriber.html" data-type="entity-link" >CisActionSubscriber</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/CisStateManager.html" data-type="entity-link" >CisStateManager</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CisStatePresenter.html" data-type="entity-link" >CisStatePresenter</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CisStatePublisher.html" data-type="entity-link" >CisStatePublisher</a>
                             </li>
                         </ul>
                     </li>
@@ -142,6 +182,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
+                            <li class="link">
+                                <a href="miscellaneous/enumerations.html" data-type="entity-link">Enums</a>
+                            </li>
+                            <li class="link">
+                                <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
+                            </li>
                             <li class="link">
                                 <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
                             </li>

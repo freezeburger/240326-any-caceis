@@ -1,0 +1,13 @@
+
+<h1>Books</h1>
+<h2>{{time}}</h2>
+
+<button>Test</button>
+
+<button (click)="srv.getBooks()">
+    Load <strong *ngIf="(srv.loading$ | async )" class="loader"></strong>
+</button>
+
+<pre>
+    {{ srv.books$ | async | json }}
+</pre>

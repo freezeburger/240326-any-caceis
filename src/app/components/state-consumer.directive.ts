@@ -21,7 +21,7 @@ export abstract class StateConsumer implements CisStatePresenter<AppGlobalState>
   createAction(type: AppActionTypes.MESSAGE_SEND_RESULT): (payload: AppMessage) => void;
   createAction(type: AppActionTypes.NOTIFICATION_REQUEST): (payload: Omit<AppNotification, 'id'>) => void;
   createAction(type: AppActionTypes.NOTIFICATION_UPDATE): (payload: AppNotification) => void;
-  createAction(type: AppActionTypes): (payload?: any) => void {
+  createAction(type: AppActionTypes): (payload?: AcceptedPayloads) => void {
     return (payload?: any) => {
       this.applicationState.process({ type, payload })
     }
@@ -29,3 +29,6 @@ export abstract class StateConsumer implements CisStatePresenter<AppGlobalState>
 
 
 }
+
+
+type AcceptedPayloads = null | AppMessage[] | AppMessagePayload | AppMessage | Omit<AppNotification, 'id'> |  AppNotification;

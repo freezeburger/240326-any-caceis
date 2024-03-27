@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'cis-cis-lib',
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
       cis-lib works!
     </p>
   `,
-  styles: ``
+  styles: ``,
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class CisLibComponent {
 

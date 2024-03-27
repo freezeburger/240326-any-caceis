@@ -1,4 +1,11 @@
+<button (click)="loadMessages()">Load Messages</button>
+<hr>
 
-{{ applicationState.state$ | async | json }}
+<app-feat-book></app-feat-book>
+<app-feat-notification></app-feat-notification>
+<app-feat-message-sender></app-feat-message-sender>
 
-<button (click)="loadMessages()">Load</button>
+<hr>
+<pre>
+    {{ (applicationState.state$ | async)?.messages | json }}
+</pre>

@@ -2,10 +2,10 @@
 import { FormGroup,FormControl } from "@angular/forms";
 
 /**
- * FormMapping
+ * FormMapping (Mapped Type from TypeScript )
  */
-type MappedToForm<Type> = {
-    [Properties in keyof Type]: FormControl<Type[Properties] |null>
+export type MappedToForm<Type> = {
+    [Properties in keyof Type]: FormControl<Type[Properties] | null>
 }
 
 /**

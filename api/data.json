@@ -1,3 +1,19 @@
 {
-    "messages":[]
+    "messages":[
+        {
+            "id":1,
+            "author":null,
+            "title":"First message",
+            "text":"First message Text",
+            "creationDate":1711463264149
+        },
+        {
+            "id":2,
+            "author":null,
+            "title":"Second message",
+            "text":"Second",
+            "creationDate":1711463264149
+        }
+    ],
+    "notifications":[]
 }

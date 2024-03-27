@@ -1,0 +1,13 @@
+<p>feat-message-sender works!</p>
+
+{{ messageForm.value | json }}
+
+<form [formGroup]="messageForm" 
+    style="display: flex; flex-direction: column;" 
+    (ngSubmit)="send()">
+    <input type="text" placeholder="Author" formControlName="author">
+    <input type="text" placeholder="Title" formControlName="title">
+    <input type="text" placeholder="Message Text" formControlName="text">
+    <input type="text" placeholder="Date" formControlName="creationDate">
+    <button>Send</button>
+</form>

@@ -6,7 +6,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "mock-server:start":"json-server ./api/data.json -p 5050 -w",
+    "mock-server:start": "json-server ./api/data.json -p 5050 -w",
     "cis-lib:build": "ng build --project=cis-lib",
     "pwa:start": "ng serve --project=app-pwa",
     "pwa:build": "ng build --project=app-pwa",
@@ -37,6 +37,7 @@
     "@angular/cli": "^17.3.1",
     "@angular/compiler-cli": "^17.3.0",
     "@compodoc/compodoc": "^1.1.23",
+    "@rxjs-insights/devtools": "^0.5.1",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
     "json-server": "^1.0.0-alpha.23",

@@ -124,43 +124,43 @@
 <title>cluster_CoreModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="77,-70 77,-195 419,-195 419,-70 77,-70"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_CoreModule_providers</title>
-<polygon fill="none" stroke="black" points="207,-78 207,-130 411,-130 411,-78 207,-78"/>
-</g>
 <g id="clust3" class="cluster">
 <title>cluster_CoreModule_imports</title>
-<polygon fill="none" stroke="black" points="85,-78 85,-130 199,-130 199,-78 85,-78"/>
+<polygon fill="none" stroke="black" points="297,-78 297,-130 411,-130 411,-78 297,-78"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_CoreModule_providers</title>
+<polygon fill="none" stroke="black" points="85,-78 85,-130 289,-130 289,-78 85,-78"/>
 </g>
 <!-- SharedModule -->
 <g id="node1" class="node">
 <title>SharedModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="191.42,-122 188.42,-126 167.42,-126 164.42,-122 92.58,-122 92.58,-86 191.42,-86 191.42,-122"/>
-<text text-anchor="middle" x="142" y="-99.8" font-family="Times,serif" font-size="14.00">SharedModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="403.42,-122 400.42,-126 379.42,-126 376.42,-122 304.58,-122 304.58,-86 403.42,-86 403.42,-122"/>
+<text text-anchor="middle" x="354" y="-99.8" font-family="Times,serif" font-size="14.00">SharedModule</text>
 </g>
 <!-- CoreModule -->
 <g id="node2" class="node">
 <title>CoreModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="268.26,-187 265.26,-191 244.26,-191 241.26,-187 181.74,-187 181.74,-151 268.26,-151 268.26,-187"/>
-<text text-anchor="middle" x="225" y="-164.8" font-family="Times,serif" font-size="14.00">CoreModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="313.26,-187 310.26,-191 289.26,-191 286.26,-187 226.74,-187 226.74,-151 313.26,-151 313.26,-187"/>
+<text text-anchor="middle" x="270" y="-164.8" font-family="Times,serif" font-size="14.00">CoreModule</text>
 </g>
 <!-- SharedModule&#45;&gt;CoreModule -->
 <g id="edge1" class="edge">
 <title>SharedModule&#45;&gt;CoreModule</title>
-<path fill="none" stroke="black" d="M186.42,-122.11C186.42,-122.11 186.42,-140.99 186.42,-140.99"/>
-<polygon fill="black" stroke="black" points="182.92,-140.99 186.42,-150.99 189.92,-140.99 182.92,-140.99"/>
+<path fill="none" stroke="black" d="M309.08,-122.11C309.08,-122.11 309.08,-140.99 309.08,-140.99"/>
+<polygon fill="black" stroke="black" points="305.58,-140.99 309.08,-150.99 312.58,-140.99 305.58,-140.99"/>
 </g>
 <!-- StateManagerService -->
 <g id="node3" class="node">
 <title>StateManagerService</title>
-<ellipse fill="#fdb462" stroke="black" cx="309" cy="-104" rx="93.73" ry="18"/>
-<text text-anchor="middle" x="309" y="-99.8" font-family="Times,serif" font-size="14.00">StateManagerService</text>
+<ellipse fill="#fdb462" stroke="black" cx="187" cy="-104" rx="93.73" ry="18"/>
+<text text-anchor="middle" x="187" y="-99.8" font-family="Times,serif" font-size="14.00">StateManagerService</text>
 </g>
 <!-- StateManagerService&#45;&gt;CoreModule -->
 <g id="edge2" class="edge">
 <title>StateManagerService&#45;&gt;CoreModule</title>
-<path fill="none" stroke="black" d="M241.88,-116.84C241.88,-116.84 241.88,-140.52 241.88,-140.52"/>
-<polygon fill="black" stroke="black" points="238.38,-140.52 241.88,-150.52 245.38,-140.52 238.38,-140.52"/>
+<path fill="none" stroke="black" d="M253.62,-116.84C253.62,-116.84 253.62,-140.52 253.62,-140.52"/>
+<polygon fill="black" stroke="black" points="250.12,-140.52 253.62,-150.52 257.12,-140.52 250.12,-140.52"/>
 </g>
 </g>
 </svg>
@@ -234,7 +234,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { APP_INITIALIZER, NgModule, PLATFORM_INITIALIZER, inject } from &#x27;@angular/core&#x27;;
 import { StateManagerService } from &#x27;./services/state-manager.service&#x27;;
 import { APPLICATION_STATE_MANAGER } from &#x27;./tokens/state-manager&#x27;;
 import { SharedModule } from &#x27;../shared/shared.module&#x27;;
@@ -243,13 +243,20 @@ import { SharedModule } from &#x27;../shared/shared.module&#x27;;
   providers:[
     StateManagerService,
     // { provide:StateManagerService, useClass:StateManagerService}
-    { provide:APPLICATION_STATE_MANAGER, useExisting:StateManagerService}
+    { provide:APPLICATION_STATE_MANAGER, useExisting:StateManagerService},
   ],
   imports:[
     SharedModule //Requires HTTPClient
   ]
 })
-export class CoreModule { }
+export class CoreModule { 
+
+  applicationStateManager &#x3D; inject(APPLICATION_STATE_MANAGER);
+
+  constructor(){
+    console.log(this)
+  }
+}
 </code></pre>
     </div>
 </div>
